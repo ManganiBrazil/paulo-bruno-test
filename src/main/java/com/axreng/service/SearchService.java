@@ -43,6 +43,9 @@ public class SearchService {
 
                 this.visitedPages.add(actualPage);
 
+                logger.info(String.format("Pages to search: %d.", pagesToSearch.size()));
+                logger.info(String.format("Visited pages: %d.", visitedPages.size()));
+
                 URLConnection urlConnection = ConnectionUtil.connect(actualPage);
 
                 if (urlConnection instanceof HttpURLConnection) {

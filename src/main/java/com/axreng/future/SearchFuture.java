@@ -20,7 +20,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-
 public class SearchFuture {
 
     private static Logger logger = LoggerFactory.getLogger(SearchFuture.class);
@@ -38,6 +37,9 @@ public class SearchFuture {
                     String actualPage = pagesToSearch.poll();
 
                     visitedPages.add(actualPage);
+
+                    logger.info(String.format("Pages to search: %d.", pagesToSearch.size()));
+                    logger.info(String.format("Visited pages: %d.", visitedPages.size()));
 
                     URLConnection urlConnection = ConnectionUtil.connect(actualPage);
 
