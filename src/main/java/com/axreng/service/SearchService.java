@@ -70,6 +70,7 @@ public class SearchService {
 
             if (this.pagesToSearch.isEmpty()) {
                 SearchDataBase.changeStatus(hashcode, SearchStatus.DONE);
+                searchData = SearchDataBase.select(hashcode);
             }
 
         } catch (IOException e) {
