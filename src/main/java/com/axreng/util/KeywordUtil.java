@@ -21,7 +21,8 @@ public class KeywordUtil {
             return null;
         }
 
-        return Base64.getEncoder().encodeToString(keyword.getBytes(StandardCharsets.UTF_8));
+        return Base64.getEncoder().encodeToString(
+                keyword.toLowerCase().getBytes(StandardCharsets.UTF_8));
     }
 
     public static final String fromHashcode(String hashcode) {
