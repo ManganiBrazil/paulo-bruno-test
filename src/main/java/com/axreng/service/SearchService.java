@@ -68,7 +68,7 @@ public class SearchService {
                 }
             }
 
-            if (this.visitedPages.isEmpty()) {
+            if (this.pagesToSearch.isEmpty()) {
                 SearchDataBase.changeStatus(hashcode, SearchStatus.DONE);
             }
 
