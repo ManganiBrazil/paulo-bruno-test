@@ -2,6 +2,7 @@ package com.axreng.util;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 public class SearchUtil {
@@ -31,7 +32,7 @@ public class SearchUtil {
     public static final boolean findKeyword(String keyword, List<String> page) {
 
         for (String line : page) {
-            if (line.contains(keyword)) {
+            if (line.toLowerCase().contains(keyword.toLowerCase())) {
                 return true;
             }
         }
